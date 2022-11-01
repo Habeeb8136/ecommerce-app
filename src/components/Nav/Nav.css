@@ -1,0 +1,123 @@
+.nav-bar{
+    position: fixed;
+    top: 0;
+    right:2px ;
+    width: 100%;
+    
+    
+  color: rgb(0, 0, 0);
+font-size: 25px;
+display: flex;
+justify-content: space-between;
+background-color: rgb(255, 255, 255);
+align-items: stretch;
+height:75px;
+box-shadow: 0 0px 5px -1px black;
+
+}
+
+.nav-bar-left{
+    padding: 0 1rem;
+    list-style: none;
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+    align-items: stretch;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-bar-right{
+    padding: 0 1rem;
+    text-decoration: none;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 0;
+  margin: 0;
+}
+
+
+.search-bar{
+    width: 500px;
+    height: 30px;
+    border-radius: 12px;
+}
+
+.nav-bar li{
+    padding: 0 30px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav-bar li:hover{
+    cursor: pointer;
+    color: rgb(51, 51, 51);
+    background-color: rgb(200, 200, 200);   
+}
+
+.home-logo{
+ background-image: url(../H-CART\ logo.png);
+  width: 200px;
+  margin-left: 30px;
+  background-size: cover;
+  transition: transform 0.5s;
+}
+
+.home-logo:hover{
+  cursor: pointer;
+  transform: scale(0.9);
+}
+
+
+.category{
+  display: flex;
+  padding: 10px;
+  margin-top: 75px;
+  background-color: whitesmoke;
+  justify-content:flex-start;
+  align-items: center;
+  width: auto;
+}
+
+.category ul{
+  display: flex;
+  justify-content:space-evenly;
+  list-style: none;
+}
+.category li{
+  padding: 3px 5px;
+  margin-left: 5px;
+  border: 1px solid grey;
+  border-radius: 5px;
+  transition: transform 0.2s;
+}
+.category li:hover{
+  background-color: grey;
+  cursor: pointer;
+}
+
+.cart-logo{
+  background-image: url(../Cart/cart\ logo.png);
+  width: 80px;
+   margin-left: 30px;
+   background-size:contain;
+   background-repeat: no-repeat;
+   transition: transform 0.5s;
+ }
+ 
+ .cart-logo:hover{
+   cursor: pointer;
+   transform: scale(1.1);
+ }
+
+ .cart-logo span{
+  position: relative;
+  left: 35px;
+  bottom: 18px;
+  color: blue;
+ }
+
