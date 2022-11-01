@@ -69,11 +69,13 @@ box-shadow: 0 0px 5px -1px black;
 
 .home-logo:hover{
   cursor: pointer;
-  transform: scale(0.9);
+  transform: scale(1.05);
+  
 }
 
 
 .category{
+  height: 100px;
   display: flex;
   padding: 10px;
   margin-top: 75px;
@@ -81,6 +83,7 @@ box-shadow: 0 0px 5px -1px black;
   justify-content:flex-start;
   align-items: center;
   width: auto;
+  box-shadow: 0 0px 5px -1px black;
 }
 
 .category ul{

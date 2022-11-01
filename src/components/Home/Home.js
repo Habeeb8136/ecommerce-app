@@ -47,6 +47,7 @@ function Home() {
               price={items.price}
               description={items.description}
               rating={items.rating.rate}
+              ratingCount={items.rating.count}
             /></li>
           </ul>
         );
