@@ -1,0 +1,39 @@
+.product-description{
+   background-color:white;
+   margin: 6rem auto;
+   padding: 4rem;
+   width: 60%;
+   
+
+}
+
+.image-container{
+    
+    width: max-content;
+    height: 400px;
+    margin:auto;
+}
+
+.image-desc{
+    max-height: 100%;
+}
+button{
+    padding :5px
+}
+
+.price-des{
+    text-align: center;
+}
+.title-des{
+    text-align: center;
+}
+.checkout-btn{
+    position: relative;
+    left: 43%;
+    width: 100px;
+    background-color: rgba(73, 188, 223, 0.87);
+    transition: 0.1s;
+}
+.checkout-btn:hover{
+    transform: scale(1.1);
+}

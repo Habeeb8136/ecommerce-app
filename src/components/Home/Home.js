@@ -41,7 +41,7 @@ function Home() {
       {products.map((items) => {
         return (
           <ul>
-            <Link to='/signin'>
+            <Link to='/product/item' state={items} style={{textDecoration:'none' ,color:"inherit"}}>
             <li>
             <ProductCard 
               src={items.image}

@@ -5,7 +5,7 @@ import Col from 'react-bootstrap/Col';
 import './ProductCard.css'
 import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Link} from "react-router-dom"
+
 
 
 const ProductCard = (props) => {
@@ -15,7 +15,7 @@ const ProductCard = (props) => {
     return (
         <Container className='product-card '>
         <Row className='product-row'>
-        <Link to="/product/:id">
+        
             <Col className='image-col'><img className='image' src={props.src} alt=""></img></Col>
             <Col sm={8} md={8} className='description-col'>
             <h5><strong>{props.title}</strong></h5>
@@ -28,7 +28,7 @@ const ProductCard = (props) => {
                 <h3>₹ {props.price}</h3>
                 <br></br>
                 <Button className='add-to-cart'>Add to Cart</Button>
-            </Col></Link>
+            </Col>
         </Row>
         
             
