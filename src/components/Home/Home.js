@@ -2,9 +2,9 @@ import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
 import "./Home.css";
-import 'react-slideshow-image/dist/styles.css'
-import Slideshow from "./Banner";
+
 import ProductCard from "../productCard/ProductCard";
+import {Link} from "react-router-dom"
 
 function Home() {
   const [products, setProducts] = useState([]);
@@ -25,7 +25,7 @@ function Home() {
 
     <div className="home-container">
     <div className='category'>
-                <h4>CATEGORY</h4>
+                <Link to='/signin'><h4>CATEGORY</h4></Link>
                 <ul>
                 <li>men's</li>
                 <li>women's</li>
@@ -41,14 +41,18 @@ function Home() {
       {products.map((items) => {
         return (
           <ul>
-            <li><ProductCard 
+            <Link to='/signin'>
+            <li>
+            <ProductCard 
               src={items.image}
               title={items.title}
               price={items.price}
               description={items.description}
               rating={items.rating.rate}
               ratingCount={items.rating.count}
-            /></li>
+            />
+            </li>
+            </Link>
           </ul>
         );
       })}

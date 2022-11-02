@@ -17,12 +17,15 @@ const Nav = () => {
             </ul>
         
             <ul className='nav-bar-right'>
-            <li><Link to="/cart">
+            <li className='cart'>
+            
+            <Link to="/cart">
             <div className='cart'>
-            <div className='cart-logo'><span>0</span></div>
-                
+            <div className='cart-logo'><div className='cart-count'>0</div></div>   
             </div>
-            </Link></li>
+            </Link>
+            
+            </li>
             <li><Link to="/signin">SINGIN</Link></li>
             <li><Link to="/signup">SINGUP</Link></li>
             </ul>

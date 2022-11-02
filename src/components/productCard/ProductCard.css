@@ -1,18 +1,15 @@
 .product-card{
-    
     width: 70%;
     background-color:white;
-
 }
+
 
 .product-row{
     padding: 10px;
 }
 
 .image-col{
-    border: 2px solid rgba(168, 168, 168, 0.555);
     background-color: rgb(255, 255, 255);
-    
 }
 
 .image{
@@ -20,7 +17,7 @@
 }
 .description-col{
     color: rgb(0, 0, 150);
-    padding: 15px;
+    padding: 25px;
 }
 
 #rating{

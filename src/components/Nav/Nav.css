@@ -105,11 +105,14 @@ box-shadow: 0 0px 5px -1px black;
 
 .cart-logo{
   background-image: url(../Cart/cart\ logo.png);
-  width: 80px;
-   margin-left: 30px;
-   background-size:contain;
+  width: 50px;
+  background-size: contain;
+  position: relative;
+  left: 4px;
+  top:2px;
    background-repeat: no-repeat;
    transition: transform 0.5s;
+   
  }
  
  .cart-logo:hover{
@@ -117,7 +120,7 @@ box-shadow: 0 0px 5px -1px black;
    transform: scale(1.1);
  }
 
- .cart-logo span{
+ .cart-count{
   position: relative;
   left: 35px;
   bottom: 18px;

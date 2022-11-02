@@ -1,0 +1,18 @@
+.signin-page{
+    background-image: url(../Home/black-friday-elements-assortment.jpg);
+    background-size:cover;
+    padding-bottom: 400px;
+}
+
+.signin-container{
+    border-radius: 6px;
+    background-color:aliceblue;
+    width: 400px;
+    height: 300px;
+    margin: auto;
+    position: relative;
+    top: 200px;
+    text-align: center;
+    padding: 60px 0;
+    
+}
