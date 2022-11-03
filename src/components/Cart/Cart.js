@@ -1,11 +1,15 @@
 import React from 'react';
 
+
 const Cart = () => {
     
     return (
         
-        <div>
-            <h1 style={{fontSize:'10rem'}}>CART</h1>
+        <div className='cart-page'>
+        <div className='cart-container'>
+            <h2>NO ITEMS IN CART</h2>
+            
+        </div>
         </div>
     );
 }

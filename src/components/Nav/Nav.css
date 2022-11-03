@@ -69,7 +69,7 @@ box-shadow: 0 0px 5px -1px black;
 
 .home-logo:hover{
   cursor: pointer;
-  transform: scale(1.05);
+  transform: scale(0.9);
   
 }
 

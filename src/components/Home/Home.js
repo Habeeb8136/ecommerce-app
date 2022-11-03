@@ -2,6 +2,8 @@ import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
 import "./Home.css";
+import Carousel from 'react-bootstrap/Carousel';
+
 
 import ProductCard from "../productCard/ProductCard";
 import {Link} from "react-router-dom"
@@ -18,6 +20,11 @@ function Home() {
       });
   }, []);
 
+  const [index, setIndex] = useState(0);
+
+  const handleSelect = (selectedIndex, e) => {
+    setIndex(selectedIndex);
+  };
 
 
   return (
@@ -35,8 +42,35 @@ function Home() {
                 </ul>
             </div>
 
-            
-    
+
+            <Carousel activeIndex={index} onSelect={handleSelect}>
+      <Carousel.Item className="banner">
+        <img 
+          className="d-block w-100 banner-image"
+          src='https://img.freepik.com/free-vector/modern-sale-banner-with-text-space-area_1017-27331.jpg?w=2000'
+          alt="First slide"
+        />
+      </Carousel.Item>
+
+      <Carousel.Item className="banner">
+        <img
+          className="d-block w-100"
+          src="https://img.freepik.com/free-vector/black-friday-sale-banner-with-limited-time-offer-details_1017-28051.jpg?w=2000"
+          alt="Second slide"
+        />
+      </Carousel.Item>
+
+      <Carousel.Item className="banner">
+        <img
+          className="d-block w-100"
+          src="https://img.freepik.com/free-vector/gradient-abstract-horizontal-sale-banner_52683-67806.jpg?w=2000"
+          alt="Third slide"
+        />
+      </Carousel.Item>
+    </Carousel>
+
+
+
 
       {products.map((items) => {
         return (

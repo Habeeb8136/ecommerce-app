@@ -1,7 +1,7 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+// import Row from 'react-bootstrap/Row';
+// import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import { useLocation } from 'react-router-dom';
 import './ProductDescription.css'
@@ -26,7 +26,7 @@ const ProductDescription = () => {
                 
 
                 
-                <div className='price-des'><h2>₹ {product.price}</h2></div>
+                <div className='price-des'><h2>$ {product.price}</h2></div>
                 <Button variant='info' className='checkout-btn'>Checkout</Button>
                 
                 
