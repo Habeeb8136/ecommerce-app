@@ -75,7 +75,7 @@ function Home() {
       {products.map((items) => {
         return (
           <ul>
-            <Link to='/product/item' state={items} style={{textDecoration:'none' ,color:"inherit"}}>
+            <Link to= {`/product/${items.title}`} state={items} style={{textDecoration:'none' ,color:"inherit"}}>
             <li>
             <ProductCard 
               src={items.image}
