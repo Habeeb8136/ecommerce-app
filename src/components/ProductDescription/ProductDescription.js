@@ -8,25 +8,25 @@ import './ProductDescription.css'
 
 const ProductDescription = () => {
 
-// const[description,setDesription]=useState([]);
+const[product,setProduct]=useState([]);
 
-//     const params=useParams()
-//     const id=params.productid
-//     console.log(params.productid)
+    const params=useParams()
+    const id=params.productid
+    console.log(params.productid)
 
 
-   const location = useLocation()
-   const product=location.state
-   console.log(product.image)
+//    const location = useLocation()
+//    const product=location.state
+//    console.log(product.image)
 
-// useEffect(() => {
-//     fetch(`https://fakestoreapi.com/products/${id}`)
-//       .then((res) => res.json())
-//       .then((data) => {
-//         setDesription(data);
-//         console.log('description' ,data);
-//       });
-//   }, []);
+useEffect(() => {
+    fetch(`https://fakestoreapi.com/products/${id}`)
+      .then((res) => res.json())
+      .then((data) => {
+        setProduct(data);
+        console.log('description' ,data);
+      });
+  }, [id]);
 
     return (
         <Container md={4} l={4} className='product-description'>
@@ -37,7 +37,7 @@ const ProductDescription = () => {
             <div  className='description-container'>
             
                
-                <div className='title-des'><h4>{product.title}</h4><div><h5><span id='rating'>{product.rating.rate}</span>  out of  {product.rating.count} reviews </h5></div></div>
+                <div className='title-des'><h4>{product.title}</h4></div>
                 <div className='description-des'>{product.description}</div>
                 <br></br>
                 
