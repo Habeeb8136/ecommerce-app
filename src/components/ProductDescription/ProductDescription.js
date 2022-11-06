@@ -1,17 +1,32 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Container from 'react-bootstrap/Container';
-// import Row from 'react-bootstrap/Row';
-// import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
-import { useLocation } from 'react-router-dom';
+import { useLocation,Params, useParams} from 'react-router-dom';
 
 import './ProductDescription.css'
 
 
 const ProductDescription = () => {
+
+// const[description,setDesription]=useState([]);
+
+//     const params=useParams()
+//     const id=params.productid
+//     console.log(params.productid)
+
+
    const location = useLocation()
    const product=location.state
    console.log(product.image)
+
+// useEffect(() => {
+//     fetch(`https://fakestoreapi.com/products/${id}`)
+//       .then((res) => res.json())
+//       .then((data) => {
+//         setDesription(data);
+//         console.log('description' ,data);
+//       });
+//   }, []);
 
     return (
         <Container md={4} l={4} className='product-description'>

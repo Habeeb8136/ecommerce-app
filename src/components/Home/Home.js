@@ -8,7 +8,7 @@ import Carousel from 'react-bootstrap/Carousel';
 import ProductCard from "../productCard/ProductCard";
 import {Link} from "react-router-dom"
 
-function Home() {
+function Home(props) {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -75,7 +75,7 @@ function Home() {
       {products.map((items) => {
         return (
           <ul>
-            <Link to= {`/product/${items.title}`} state={items} style={{textDecoration:'none' ,color:"inherit"}}>
+            <Link to= {`/product/${items.id}`} state={items} style={{textDecoration:'none' ,color:"inherit"}}>
             <li>
             <ProductCard 
               src={items.image}
