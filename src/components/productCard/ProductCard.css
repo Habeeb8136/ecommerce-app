@@ -1,6 +1,7 @@
 .product-card{
-    width: 70%;
+    width: 80%;
     background-color:white;
+    position: inherit;
 }
 
 

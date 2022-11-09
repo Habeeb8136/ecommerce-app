@@ -32,7 +32,7 @@ function Home(props) {
 
     <div className="home-container">
     <div className='category'>
-                <Link to='/signin'><h4>CATEGORY</h4></Link>
+                <Link to='/'><h4>CATEGORY</h4></Link>
                 <ul>
                 <li>men's</li>
                 <li>women's</li>
@@ -71,12 +71,12 @@ function Home(props) {
 
 
 
-
+    <ul>
       {products.map((items) => {
         return (
-          <ul>
+          
             <Link to= {`/product/${items.id}`} state={items} style={{textDecoration:'none' ,color:"inherit"}}>
-            <li>
+            <li className="product-card" style={{margin:"10px"}}>
             <ProductCard 
               src={items.image}
               title={items.title}
@@ -87,9 +87,10 @@ function Home(props) {
             />
             </li>
             </Link>
-          </ul>
+          
         );
       })}
+      </ul>
     </div>
   );
 }

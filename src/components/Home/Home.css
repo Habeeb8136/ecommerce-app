@@ -2,9 +2,23 @@
 
 * {box-sizing:border-box}
 
+
+
 ul{
     list-style: none;
-    padding-top: 10px;
+    margin-top: 10px;
+    margin-left: 10%;
+    
+}
+
+.product-card{
+    transition:transform 0.3s;
+    width: 100%;
+    
+}
+.product-card:hover{
+    transform: scale(1.02);
+    z-index: -1;
 }
 
 .banner{
