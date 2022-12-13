@@ -17,9 +17,6 @@
 .image-desc{
     max-height: 100%;
 }
-button{
-    padding :5px
-}
 
 .price-des{
     text-align: center;
@@ -29,11 +26,36 @@ button{
 }
 .checkout-btn{
     position: relative;
-    left: 43%;
-    width: 100px;
+    width: 110px;
     background-color: rgba(73, 188, 223, 0.87);
     transition: 0.1s;
 }
 .checkout-btn:hover{
     transform: scale(1.1);
+}
+@media screen and (max-width:800px){
+    .product-description{
+        background-color:white;
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+        width: 100vw;
+        font-size: 10px;
+        text-align: center;
+        
+     
+     }
+     
+     .image-container{
+         height: 200px;
+     }
+     
+     .image-desc{
+         max-height: 80%;
+     }
+     
+    
+     .checkout-btn:hover{
+         transform: scale(1.1);
+     }
 }

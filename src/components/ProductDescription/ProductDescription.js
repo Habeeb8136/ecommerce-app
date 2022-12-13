@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
-import { useLocation,Params, useParams} from 'react-router-dom';
+import {useParams} from 'react-router-dom';
 
 import './ProductDescription.css'
 
@@ -44,7 +44,7 @@ useEffect(() => {
 
                 
                 <div className='price-des'><h2>$ {product.price}</h2></div>
-                <Button variant='info' className='checkout-btn'>Checkout</Button>
+                <Button variant='info' className='checkout-btn'>Add to Cart</Button>
                 
                 
                 
