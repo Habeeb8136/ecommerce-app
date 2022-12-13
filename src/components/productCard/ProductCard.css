@@ -1,15 +1,17 @@
 .product-card{
-    width: 80%;
+    margin-inline: 300px;
     background-color:white;
-    position: inherit;
 }
 
 
-.product-row{
-    padding: 10px;
+.product-row{   
+    margin: auto;
+    padding: 30px;
+    text-align: center;
 }
 
 .image-col{
+    
     background-color: rgb(255, 255, 255);
 }
 
@@ -17,6 +19,7 @@
    max-width: 100%;
 }
 .description-col{
+    text-align: left;
     color: rgb(0, 0, 150);
     padding: 25px;
 }
@@ -38,4 +41,23 @@
     color: white;
 }
 
+@media screen and (max-width:640px){
+    .product-card{
+        margin: auto;
+        width: 100%;
+        margin-block: 10px;
+        text-align: center;
+    }
+    .image{
+        max-width: 40%;
+     }
+     
+    .description{
+        display: none;
+    }
+    .price{
+        padding:  0;
+    }
+    
+}
 

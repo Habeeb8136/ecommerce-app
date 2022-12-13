@@ -74,34 +74,7 @@ box-shadow: 0 0px 5px -1px black;
 }
 
 
-.category{
-  height: 100px;
-  display: flex;
-  padding: 10px;
-  margin-top: 75px;
-  background-color: whitesmoke;
-  justify-content:flex-start;
-  align-items: center;
-  width: auto;
-  box-shadow: 0 0px 5px -1px black;
-}
 
-.category ul{
-  display: flex;
-  justify-content:space-evenly;
-  list-style: none;
-}
-.category li{
-  padding: 3px 5px;
-  margin-left: 5px;
-  border: 1px solid grey;
-  border-radius: 5px;
-  transition: transform 0.2s;
-}
-.category li:hover{
-  background-color: grey;
-  cursor: pointer;
-}
 
 .cart-logo{
   background-image: url(../Cart/cart\ logo.png);

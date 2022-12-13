@@ -10,10 +10,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const ProductCard = (props) => {
 
-    var randomReviewCount=Math.floor(Math.random()*4000)
+    
 
     return (
-        <Container className='product-card '>
+        
         <Row className='product-row'>
         
             <Col className='image-col'><img className='image' src={props.src} alt=""></img></Col>
@@ -21,7 +21,7 @@ const ProductCard = (props) => {
             <h5><strong>{props.title}</strong></h5>
             <h5><span id='rating'>{props.rating}</span> out of {props.ratingCount} reviews </h5>
             <br></br>
-            <p >{props.description}</p>
+            <p className='description'>{props.description}</p>
             </Col>
             
             <Col className='price addToCart'>
@@ -32,7 +32,7 @@ const ProductCard = (props) => {
         </Row>
         
             
-        </Container>
+        
     );
 }
 
