@@ -1,8 +1,8 @@
 import React from 'react';
 import './Nav.css';
 import {Link} from "react-router-dom"
-
-
+import logo from '../H-CART logo.png'
+import {BsSearch} from 'react-icons/bs'
 
 const Nav = () => {
     return (
@@ -10,13 +10,14 @@ const Nav = () => {
 
         <div className='nav-bar'>
 
-            <ul className='nav-bar-left'>
-            <li className='home-logo'><Link to='/' ><div className='home-logo'></div></Link></li>
+            <div className='nav-bar-left'>
+            <div className='home-logo'><Link to='/' ><img src={logo} alt=''></img></Link></div>
             <input className='search-bar' placeholder='search items'></input>
             
-            </ul>
+            </div>
         
             <ul className='nav-bar-right'>
+            <BsSearch className='searchbutton'/>
             <li className='cart'>
             
             <Link to="/cart">

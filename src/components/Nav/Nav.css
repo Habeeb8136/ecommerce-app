@@ -8,35 +8,38 @@
   color: rgb(0, 0, 0);
 font-size: 25px;
 display: flex;
-justify-content: space-between;
+
 background-color: rgb(255, 255, 255);
-align-items: stretch;
+
 height:75px;
 box-shadow: 0 0px 5px -1px black;
 
 }
 
 .nav-bar-left{
-    padding: 0 1rem;
     list-style: none;
     display: flex;
     width: 50%;
     justify-content: space-between;
-    align-items: stretch;
     align-items: center;
     padding: 0;
     margin: 0;
 }
 
 .nav-bar-right{
-    padding: 0 1rem;
+    
     text-decoration: none;
   list-style: none;
   display: flex;
-  justify-content: space-between;
-  align-items: stretch;
+  justify-content: right;
+  align-items: center;
+  width: 100%;
+  
   padding: 0;
-  margin: 0;
+  margin: 0 10px;
+}
+.searchbutton{
+  display:none
 }
 
 
@@ -60,13 +63,17 @@ box-shadow: 0 0px 5px -1px black;
 }
 
 .home-logo{
- background-image: url(../H-CART\ logo.png);
+ 
   width: 200px;
   margin-left: 30px;
   background-size: cover;
   transition: transform 0.5s;
 }
-
+.home-logo img{
+object-fit: contain;
+height: auto;
+width: 190px;
+}
 .home-logo:hover{
   cursor: pointer;
   transform: scale(0.9);
@@ -99,4 +106,26 @@ box-shadow: 0 0px 5px -1px black;
   bottom: 18px;
   color: blue;
  }
-
+@media screen and (max-width:800px){
+  .search-bar{
+    width: 100px;
+    display: none;
+  }
+  .home-logo{
+    scale: 0.5;
+    width: 98px;
+    margin-left: 0;
+  }
+  .nav-bar{
+    width: 100wv;
+    font-size: 15px;
+  }
+  .nav-bar li{
+    padding: 0 10px;
+  }
+  .searchbutton{
+    display:initial;
+    scale:1.5
+  }
+  
+}
