@@ -3,7 +3,9 @@ import { useState } from "react";
 import { useEffect } from "react";
 import "./Home.css";
 import Carousel from 'react-bootstrap/Carousel';
-
+import banner1 from './salebanners/Black and Red Modern Discount Banner.png';
+import banner2 from './salebanners/Blue Dynamic Fashion Special Sale Banner.png'
+import banner3 from './salebanners/Dark Blue Modern Discount Banner.png'
 
 import ProductCard from "../productCard/ProductCard";
 import {Link} from "react-router-dom"
@@ -47,7 +49,7 @@ function Home(props) {
       <Carousel.Item className="banner">
         <img 
           className="d-block w-100 banner-image"
-          src='https://img.freepik.com/free-vector/modern-sale-banner-with-text-space-area_1017-27331.jpg?w=2000'
+          src={banner1}
           alt="First slide"
         />
       </Carousel.Item>
@@ -55,7 +57,7 @@ function Home(props) {
       <Carousel.Item className="banner">
         <img
           className="d-block w-100"
-          src="https://img.freepik.com/free-vector/black-friday-sale-banner-with-limited-time-offer-details_1017-28051.jpg?w=2000"
+          src={banner2}
           alt="Second slide"
         />
       </Carousel.Item>
@@ -63,7 +65,7 @@ function Home(props) {
       <Carousel.Item className="banner">
         <img
           className="d-block w-100"
-          src="https://img.freepik.com/free-vector/gradient-abstract-horizontal-sale-banner_52683-67806.jpg?w=2000"
+          src={banner3}
           alt="Third slide"
         />
       </Carousel.Item>
@@ -71,12 +73,12 @@ function Home(props) {
 
 
 
-    <ul>
+      <div className="product-list">
       {products.map((items) => {
         return (
           
             <Link to= {`/product/${items.id}`} state={items} style={{textDecoration:'none' ,color:"inherit"}}>
-            <li className="product-card" style={{margin:"10px"}}>
+            <div className="product-card">
             <ProductCard 
               src={items.image}
               title={items.title}
@@ -85,12 +87,12 @@ function Home(props) {
               rating={items.rating.rate}
               ratingCount={items.rating.count}
             />
-            </li>
+            </div>
             </Link>
           
         );
       })}
-      </ul>
+      </div>
     </div>
   );
 }
