@@ -1,6 +1,5 @@
 import React from "react";
-import { useState } from "react";
-import { useEffect } from "react";
+import { useState ,useEffect , useRef } from "react";
 import "./Home.css";
 
 
@@ -9,6 +8,7 @@ import { Link } from "react-router-dom";
 import CarouselSlide from "./Carousel";
 
 function Home(props) {
+  const display = useRef(null)
   const [products, setProducts] = useState([]);
   const [category, setCategory] = useState("");
   const [filteredData, setFilteredData] = useState([]);
@@ -29,6 +29,10 @@ function Home(props) {
     setFilteredData(
       products.filter((item) => item.category.includes(clickedCategory))
     );
+    window.scrollTo({
+      top: display.current.offsetTop,
+      behavior: 'smooth',
+    });
     console.log(filteredData);
   };
 
@@ -38,10 +42,10 @@ function Home(props) {
         <CarouselSlide />
       </div>
 
-      <div className="category">
+      <div className="category" ref={display}>
           <h4>CATEGORIES</h4>
         <ul onClick={(e) => filterSearch(e)}>
-          <li>men's </li>
+          <li> men's </li>
           <li>women's </li>
           <li>electronics</li>
           <li>jewelery</li>
@@ -49,7 +53,7 @@ function Home(props) {
         </ul>
       </div>
 
-      <div className="product-list">
+      <div className="product-list" >
         {filteredData.length!==0
           ? filteredData.map((items) => {
               return (
@@ -58,7 +62,7 @@ function Home(props) {
                   state={items}
                   style={{ textDecoration: "none", color: "inherit" }}
                 >
-                  <div className="product-card">
+                  <div className="product-card" >
                     <ProductCard
                       src={items.image}
                       title={items.title}
