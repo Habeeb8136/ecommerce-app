@@ -18,9 +18,9 @@
     z-index: -1;
 }
 
-.banner{
-    width:100vw;
-     
+.banner-carouel{
+  width: 70%;
+  margin: auto;
 }
 .banner img{
     object-fit: cover;
