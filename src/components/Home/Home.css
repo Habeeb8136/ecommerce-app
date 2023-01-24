@@ -27,9 +27,9 @@
 }
 .category{
     width: 100vw;
-    height: fit-content;
+    
     display: flex;
-    padding: 10px;
+    padding: 1rem;
     background-color: whitesmoke;
     align-items: center;
     box-shadow: 0 0px 5px -1px black;
