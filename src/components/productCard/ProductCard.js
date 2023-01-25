@@ -10,6 +10,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const ProductCard = (props) => {
 
     
+    
 
     return (
         
@@ -26,7 +27,7 @@ const ProductCard = (props) => {
             <Col className='price addToCart'>
                 <h3>$ {props.price}</h3>
                 <br></br>
-                <Button className='add-to-cart'>Add to Cart</Button>
+                <Button className='add-to-cart' >Buy Now</Button>
             </Col>
         </Row>
         

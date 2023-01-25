@@ -35,6 +35,8 @@ function Home(props) {
     });
     console.log(filteredData);
   };
+  
+  
 
   return (
     <div className="home-container">
@@ -70,6 +72,8 @@ function Home(props) {
                       description={items.description}
                       rating={items.rating.rate}
                       ratingCount={items.rating.count}
+                      
+                      items={items}
                     />
                   </div>
                 </Link>

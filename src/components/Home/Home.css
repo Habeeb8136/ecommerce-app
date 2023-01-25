@@ -10,8 +10,6 @@
 .product-card{
     transition:transform 0.3s;
     margin:10px auto;
-    
-    
 }
 .product-card:hover{
     transform: scale(1.02);
