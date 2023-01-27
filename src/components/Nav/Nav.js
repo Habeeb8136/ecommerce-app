@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Nav.css';
 import {Link} from "react-router-dom"
 import logo from '../H-CART logo.png'
-import {BsSearch} from 'react-icons/bs'
+import {FaShoppingCart} from 'react-icons/fa'
+import {BsSearch} from 'react-icons/bs';
+import { useSelector } from 'react-redux';
 
 const Nav = () => {
+    const cart=useSelector(state=>state.cart);
+    
+        
+   
     return (
         <>
 
@@ -14,21 +20,23 @@ const Nav = () => {
             <div className='home-logo'><Link to='/' ><img src={logo} alt=''></img></Link></div>
             <input className='search-bar' placeholder='search items'></input>
             
+            <BsSearch className='searchbutton'/>
             </div>
         
             <ul className='nav-bar-right'>
-            <BsSearch className='searchbutton'/>
-            <li className='cart'>
-            
+
+
             <Link to="/cart">
-            <div className='cart'>
-            <div className='cart-logo'><div className='cart-count'>0</div></div>   
-            </div>
+            
+            <div className='cart'><FaShoppingCart className='cart-logo'/><span className='cart-count'>{cart.items.length}</span></div>   
+            
             </Link>
             
-            </li>
-            <li><Link to="/signin">SINGIN</Link></li>
-            <li><Link to="/signup">SINGUP</Link></li>
+            
+            
+            
+            <li className='signin'><Link to="/signin">SINGIN</Link></li>
+            <li className='signup'><Link to="/signup">SINGUP</Link></li>
             </ul>
 
         </div>
