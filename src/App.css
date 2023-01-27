@@ -10,3 +10,7 @@ body{
 .App{
   margin: auto;
 }
+
+a{
+  text-decoration: none;
+}
