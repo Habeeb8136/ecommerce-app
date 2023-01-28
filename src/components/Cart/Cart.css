@@ -1,5 +1,11 @@
 .cart-page{
     background-image: url(../Home/surprised-girl-pink-culottes-posing-with-trolley-full-multi-colored-packages-with-new-clothes.jpg);
-    height: 100%;
+    background-size: cover;
+    height: 100vh;
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    
+    
 }
 
