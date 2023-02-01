@@ -20,10 +20,10 @@ const Nav = () => {
             <div className='home-logo'><Link to='/' ><img src={logo} alt=''></img></Link></div>
             <input className='search-bar' placeholder='search items'></input>
             
-            <BsSearch className='searchbutton'/>
             </div>
         
             <ul className='nav-bar-right'>
+            <BsSearch className='searchbutton'/>
 
 
             <Link to="/cart">

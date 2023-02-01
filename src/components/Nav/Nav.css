@@ -107,7 +107,6 @@ width: 190px;
  }
 @media screen and (max-width:800px){
   .search-bar{
-    width: 100px;
     display: none;
   }
   .home-logo{
@@ -123,7 +122,8 @@ width: 190px;
     padding: 0 10px;
   }
   .searchbutton{
-    display:none;
+    display:initial;
+    
   }
   .signin,.signup{
     display: none;
