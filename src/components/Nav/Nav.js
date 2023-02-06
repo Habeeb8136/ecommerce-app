@@ -18,7 +18,7 @@ const Nav = () => {
 
             <div className='nav-bar-left'>
             <div className='home-logo'><Link to='/' ><img src={logo} alt=''></img></Link></div>
-            <input className='search-bar' placeholder='search items'></input>
+            {/* <input className='search-bar' placeholder='search items'></input> */}
             
             </div>
         
