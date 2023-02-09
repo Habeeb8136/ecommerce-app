@@ -5,7 +5,66 @@
     padding: 100px;
     display: flex;
     flex-direction: column;
+    align-Items: "center";
+    justify-content: center;
     
     
 }
 
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    margin: 10px auto;
+    padding: 10px;
+    
+    background-color: white;
+    
+}
+.cart-item:hover{
+      box-shadow: 2px 2px 5px gray;
+
+  }
+  
+  .image {
+    width: 150px;
+    
+  }
+  
+  .item-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+  }
+  
+  .item-name {
+    font-weight: bold;
+    font-size: 20px;
+  }
+  
+  .item-price {
+    font-size: 18px;
+  }
+  
+  .item-quantity {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+  }
+  .quantity-selector{
+    display: flex;
+    gap:3px;
+    justify-content: center;
+    align-items: center;
+  }
+  .input{
+    width: 30px;
+  }
+  .button{
+    width: 25px;
+  }
+  
