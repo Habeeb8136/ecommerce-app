@@ -3,11 +3,14 @@
     background-size: cover;
     height: 100vh;
     padding: 100px;
-    display: flex;
-    flex-direction: column;
-    align-Items: "center";
-    justify-content: center;
     
+    display: block;
+    
+    justify-content: center;
+    align-items: center;
+    
+    overflow: auto;
+    overflow-x: scroll;
     
 }
 
@@ -16,9 +19,9 @@
     justify-content: space-between;
     align-items: center;
     width: 70%;
+    height: max-content;
     margin: 10px auto;
-    padding: 10px;
-    
+    padding: 30px;
     background-color: white;
     
 }
