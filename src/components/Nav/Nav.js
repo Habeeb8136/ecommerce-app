@@ -28,7 +28,7 @@ const Nav = () => {
 
             <Link to="/cart">
             
-            <div className='cart'><FaShoppingCart className='cart-logo'/><span className='cart-count'>{cart.items.length}</span></div>   
+            <div className='cart'><FaShoppingCart className='cart-logo'/><span className='cart-count'>{cart.TotalItemsquantity}</span></div>   
             
             </Link>
             
