@@ -18,7 +18,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 70%;
+    width: 80%;
     height: max-content;
     margin: 10px auto;
     padding: 30px;
@@ -69,5 +69,23 @@
   }
   .button{
     width: 25px;
+  }
+  @media screen and (max-width:600px){
+    .cart-item{
+      width: 90%;
+      padding: 5px;
+      gap: 0;
+    }
+    .image{
+      width: 90px;
+    }
+    .cart-page{
+      padding: 10px;
+      font-size: 10px;
+      padding-top: 80px;
+    }
+    .item-name{
+      font-size: 12px;
+    }
   }
   
