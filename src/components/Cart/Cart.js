@@ -1,11 +1,19 @@
 import React from "react";
 import './Cart.css';
-import { useSelector } from "react-redux";
+import { useSelector , useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+import {FaTrashAlt} from 'react-icons/fa'
+import { deleteFromCart } from "../../features/cart";
 
 const Cart = () => {
   const cartItems = useSelector((state) => state.cart);
+  const dispatch = useDispatch()
   console.log(cartItems);
+
+  const removeItem = (item) => {
+    dispatch(deleteFromCart(item))
+  }
+
   return (
     <div className="cart-page">
       <h1>Shopping Cart</h1>
@@ -16,10 +24,24 @@ const Cart = () => {
           <>
             <h2>Your shopping card is empty</h2>
             <Link to="/">
-              <p>browse products</p>
+              <p>browse products--</p>
             </Link>
           </>
         ) : (
+          <div className="cartContainer">
+          <div className="total-value">
+          <div>
+          <h3>Total Cart Items  :  {cartItems.TotalItemsquantity} </h3>
+          <h3>Total price  :  ${cartItems.totalItemsAmount.toFixed(2)}</h3>
+          </div>
+          <div>
+            <button className="checkout">Checkout</button>
+          </div>
+
+          </div>
+
+          
+          {
           cartItems.items.map((item) => {
             return (
              
@@ -31,20 +53,25 @@ const Cart = () => {
         
       </div>
       <div className="item-quantity">
-        <div>quantity</div>
+        
         <div className="quantity-selector">
         <button className="button">-</button>
-        <input  value={item.quantity} className="input" />
+        <input  value={item.itemQuantity} className="input" />
         <button className="button">+</button>
         </div>
       </div>
+      <FaTrashAlt className="deleteButton" onClick={()=> removeItem(item)}/>
       <div className="item-total">${item.price}</div>
     </div>
               
             );
-          })
+          })}
+
+          </div>
+          
         )}
       </div>
+      
     </div>
   );
 };
